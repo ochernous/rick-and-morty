@@ -4,6 +4,8 @@
 - Create venv: `python -m venv venv`
 - Activate it: `venv\scripts\activate`
 - Install requirements: `pip install -r requirements.txt`
+- Create new Postgres DB and User
+- Copy .env.sample > .env and populate it with all required data
 - Run migrations: `python manage.py migrate`
 - Run Redis server: `docker run -d -p 6379:6379 redis`
 - Run celery worker for tasks handling: `celery -A py_rick_and_morty_api worker -l INFO -P threads`
