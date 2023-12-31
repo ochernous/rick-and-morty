@@ -1,14 +1,6 @@
 # Rick and Morty characters API
 
 ### How to run
-- Create venv: `python -m venv venv`
-- Activate it: `venv\scripts\activate`
-- Install requirements: `pip install -r requirements.txt`
-- Create new Postgres DB and User
 - Copy .env.sample > .env and populate it with all required data
-- Run migrations: `python manage.py migrate`
-- Run Redis server: `docker run -d -p 6379:6379 redis`
-- Run celery worker for tasks handling: `celery -A py_rick_and_morty_api worker -l INFO -P threads`
-- Run celery beat for task scheduling: `celery -A py_rick_and_morty_api beat -l INFO --scheduler django_celery_beat.schedulers:DatabaseScheduler`
-- Create schedule for running sync in DB
-- Run app: `python manage.py runserver`
+- `docker-compose up --build`
+- Create admin user and Create schedule for running sync in DB
