@@ -35,7 +35,10 @@ def save_characters(characters: list[Character]) -> None:
         try:
             character.save()
         except IntegrityError:
-            print(f"Character with 'api_id': {character.api_id} already exists in DB")
+            print(
+                f"Character with 'api_id': "
+                f"{character.api_id} already exists in DB"
+            )
 
 
 def sync_characters_with_api() -> None:
